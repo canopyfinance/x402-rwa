@@ -1,0 +1,66 @@
+{
+  "name": "@canopy-finance/x402-rwa",
+  "version": "1.0.0",
+  "description": "RWA-funded x402 buyer helper: pay x402 invoices by swapping just enough tokenized RWA into the settlement stablecoin behind a validation wall. Buyer-side only, non-custodial.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./viem": {
+      "types": "./dist/viem.d.ts",
+      "import": "./dist/viem.js",
+      "require": "./dist/viem.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "x402",
+    "rwa",
+    "payments",
+    "usdc",
+    "usdg",
+    "agent",
+    "uniswap",
+    "stablecoin",
+    "non-custodial"
+  ],
+  "peerDependencies": {
+    "viem": "^2.21.26"
+  },
+  "dependencies": {
+    "x402": "^1.2.0",
+    "x402-fetch": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "@typescript-eslint/parser": "^8.18.0",
+    "eslint": "^9.17.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "viem": "^2.21.26",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
