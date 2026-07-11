@@ -1,6 +1,6 @@
 {
   "name": "@canopy-finance/x402-rwa",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "RWA-funded x402 buyer helper: pay x402 invoices by swapping just enough tokenized RWA into the settlement stablecoin behind a validation wall. Buyer-side only, non-custodial.",
   "license": "MIT",
   "author": "Canopy Finance",
@@ -32,6 +32,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
